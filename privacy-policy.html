@@ -2,100 +2,1648 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Privacy Policy - Deen Al Islam</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+          content="#087f5b">
+
+    <meta name="description"
+          content="Privacy Policy for Deen Al Islam - an Islamic utility application by AROET.">
+
+    <title>Privacy Policy | Deen Al Islam</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.7;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 24px;
-            color: #222;
-            background: #ffffff;
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        h1 {
-            margin-bottom: 8px;
+
+        /* =========================================================
+           ROOT / THEME
+        ========================================================= */
+
+        :root {
+            --primary: #087f5b;
+            --primary-dark: #056044;
+            --primary-light: #dff7ee;
+
+            --accent: #d4a72c;
+            --accent-light: #fff7d9;
+
+            --text: #17211d;
+            --text-secondary: #596760;
+            --text-muted: #7b8781;
+
+            --background: #f4f8f6;
+            --surface: #ffffff;
+            --surface-soft: #f8fbfa;
+
+            --border: #e2ebe7;
+
+            --shadow:
+                0 12px 40px rgba(12, 55, 42, 0.08);
+
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 12px;
+        }
+
+
+        /* =========================================================
+           BODY
+        ========================================================= */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #eaf8f2 0px,
+                    #f4f8f6 380px,
+                    #f4f8f6 100%
+                );
+
+            color: var(--text);
+            line-height: 1.75;
+            min-height: 100vh;
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #087f5b,
+                    #056044
+                );
+
+            color: white;
+            padding: 58px 20px 76px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+
+            width: 280px;
+            height: 280px;
+
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 50%;
+
+            top: -120px;
+            right: -80px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+
+            width: 420px;
+            height: 420px;
+
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 50%;
+
+            bottom: -300px;
+            left: -140px;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+
+            max-width: 980px;
+            margin: auto;
+            text-align: center;
+        }
+
+
+        /* =========================================================
+           BRAND
+        ========================================================= */
+
+        .brand-icon {
+            width: 72px;
+            height: 72px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.22),
+                    rgba(255,255,255,0.08)
+                );
+
+            border: 1px solid rgba(255,255,255,0.22);
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.12);
+
+            font-size: 34px;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 6vw, 52px);
+            line-height: 1.15;
+            font-weight: 800;
+            letter-spacing: -1.2px;
+
+            margin-bottom: 12px;
+        }
+
+        .hero-subtitle {
+            max-width: 680px;
+            margin: auto;
+
+            color: rgba(255,255,255,0.88);
+
+            font-size: 17px;
+        }
+
+        .hero-meta {
+            margin-top: 24px;
+
+            display: inline-flex;
+            flex-wrap: wrap;
+
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .meta-pill {
+            padding: 8px 15px;
+
+            border-radius: 100px;
+
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.18);
+
+            font-size: 13px;
+            color: rgba(255,255,255,0.92);
+        }
+
+
+        /* =========================================================
+           MAIN CONTAINER
+        ========================================================= */
+
+        .page {
+            max-width: 980px;
+            margin: -38px auto 60px;
+
+            padding: 0 18px;
+
+            position: relative;
+            z-index: 5;
+        }
+
+
+        /* =========================================================
+           MAIN CARD
+        ========================================================= */
+
+        .document {
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-lg);
+
+            box-shadow: var(--shadow);
+
+            overflow: hidden;
+        }
+
+        .document-body {
+            padding: 42px;
+        }
+
+
+        /* =========================================================
+           NOTICE
+        ========================================================= */
+
+        .notice {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+
+            padding: 20px;
+
+            margin-bottom: 36px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #edf9f4,
+                    #f7fcfa
+                );
+
+            border: 1px solid #ccebdd;
+
+            border-radius: var(--radius-md);
+        }
+
+        .notice-icon {
+            flex: 0 0 auto;
+
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: var(--primary);
+
+            color: white;
+
+            border-radius: 12px;
+
+            font-size: 20px;
+        }
+
+        .notice strong {
+            color: var(--primary-dark);
+        }
+
+
+        /* =========================================================
+           TABLE OF CONTENTS
+        ========================================================= */
+
+        .toc {
+            margin-bottom: 42px;
+
+            padding: 24px;
+
+            background: var(--surface-soft);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-md);
+        }
+
+        .toc-title {
+            font-size: 17px;
+            font-weight: 750;
+
+            margin-bottom: 15px;
+
+            color: var(--primary-dark);
+        }
+
+        .toc-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 8px 22px;
+        }
+
+        .toc a {
+            color: var(--text-secondary);
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            padding: 6px 0;
+
+            transition: 0.2s ease;
+        }
+
+        .toc a:hover {
+            color: var(--primary);
+            transform: translateX(3px);
+        }
+
+
+        /* =========================================================
+           SECTIONS
+        ========================================================= */
+
+        section {
+            scroll-margin-top: 20px;
+
+            padding-top: 8px;
+            margin-top: 42px;
+        }
+
+        section:first-of-type {
+            margin-top: 0;
         }
 
         h2 {
-            margin-top: 32px;
+            display: flex;
+            align-items: center;
+            gap: 11px;
+
+            font-size: 23px;
+            line-height: 1.35;
+
+            color: var(--primary-dark);
+
+            margin-bottom: 15px;
         }
 
-        .updated {
-            color: #666;
+        h2::before {
+            content: "";
+
+            width: 5px;
+            height: 25px;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    var(--primary),
+                    var(--accent)
+                );
         }
+
+        h3 {
+            font-size: 17px;
+
+            color: var(--text);
+
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: var(--text-secondary);
+
+            margin-bottom: 13px;
+        }
+
+
+        /* =========================================================
+           LISTS
+        ========================================================= */
+
+        ul {
+            list-style: none;
+
+            margin: 14px 0 18px;
+
+            display: grid;
+
+            gap: 8px;
+        }
+
+        li {
+            position: relative;
+
+            padding-left: 28px;
+
+            color: var(--text-secondary);
+        }
+
+        li::before {
+            content: "✓";
+
+            position: absolute;
+            left: 0;
+            top: 2px;
+
+            width: 20px;
+            height: 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: var(--primary-light);
+
+            color: var(--primary);
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+
+        /* =========================================================
+           FEATURE CARDS
+        ========================================================= */
+
+        .feature-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 14px;
+
+            margin: 18px 0 8px;
+        }
+
+        .feature {
+            padding: 18px;
+
+            border-radius: var(--radius-sm);
+
+            background: var(--surface-soft);
+
+            border: 1px solid var(--border);
+        }
+
+        .feature-title {
+            font-weight: 750;
+
+            color: var(--text);
+
+            margin-bottom: 5px;
+        }
+
+        .feature p {
+            margin: 0;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================================
+           HIGHLIGHT BOX
+        ========================================================= */
+
+        .highlight {
+            margin: 20px 0;
+
+            padding: 18px 20px;
+
+            border-radius: var(--radius-sm);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff9e7,
+                    #fffdf6
+                );
+
+            border: 1px solid #f0dfaa;
+        }
+
+        .highlight strong {
+            color: #80600a;
+        }
+
+
+        /* =========================================================
+           CONTACT CARD
+        ========================================================= */
+
+        .contact-card {
+            margin-top: 20px;
+
+            padding: 24px;
+
+            border-radius: var(--radius-md);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eaf8f2,
+                    #f8fcfa
+                );
+
+            border: 1px solid #cdeade;
+        }
+
+        .contact-row {
+            display: flex;
+            gap: 10px;
+
+            margin: 8px 0;
+
+            color: var(--text-secondary);
+        }
+
+        .contact-label {
+            min-width: 105px;
+
+            font-weight: 700;
+
+            color: var(--primary-dark);
+        }
+
+        a {
+            color: var(--primary);
+
+            font-weight: 600;
+
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        .footer {
+            margin-top: 34px;
+
+            padding-top: 24px;
+
+            border-top: 1px solid var(--border);
+
+            text-align: center;
+
+            color: var(--text-muted);
+
+            font-size: 13px;
+        }
+
+        .footer-brand {
+            color: var(--primary);
+
+            font-weight: 800;
+
+            font-size: 15px;
+
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 700px) {
+
+            .hero {
+                padding: 44px 18px 68px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero-subtitle {
+                font-size: 15px;
+            }
+
+            .page {
+                margin-top: -30px;
+                padding: 0 12px;
+            }
+
+            .document-body {
+                padding: 25px 19px 32px;
+            }
+
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+
+
+        @media (max-width: 420px) {
+
+            .hero {
+                padding-top: 36px;
+            }
+
+            .brand-icon {
+                width: 62px;
+                height: 62px;
+
+                border-radius: 18px;
+
+                font-size: 28px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .document-body {
+                padding: 22px 16px 28px;
+            }
+
+            .notice {
+                padding: 16px;
+            }
+
+            .contact-row {
+                display: block;
+            }
+
+            .contact-label {
+                display: block;
+                margin-bottom: 2px;
+            }
+        }
+
     </style>
 </head>
 
+
 <body>
 
-    <h1>Privacy Policy</h1>
 
-    <p class="updated">
-        Last updated: [DATE]
-    </p>
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-    <p>
-        This Privacy Policy explains how Deen Al Islam handles information
-        when you use our application.
-    </p>
+<header class="hero">
 
-    <h2>1. Information We Collect</h2>
+    <div class="hero-inner">
 
-    <p>
-        This section will describe the information processed by the application.
-    </p>
+        <div class="brand-icon">
+            ☪
+        </div>
 
-    <h2>2. Location Information</h2>
+        <h1>Privacy Policy</h1>
 
-    <p>
-        Location information is used to provide location-based features such
-        as prayer times, Qibla direction, and nearby mosque search.
-    </p>
+        <p class="hero-subtitle">
+            Deen Al Islam — your Islamic companion for prayer,
+            Quran, Hadith, Qibla, Zakat and more.
+        </p>
 
-    <h2>3. Advertising</h2>
+        <div class="hero-meta">
 
-    <p>
-        Deen Al Islam may use third-party advertising services to display ads.
-    </p>
+            <span class="meta-pill">
+                Developer: AROET
+            </span>
 
-    <h2>4. Analytics</h2>
+            <span class="meta-pill">
+                Last updated: August 12, 2026
+            </span>
 
-    <p>
-        The application may use analytics services to understand application
-        usage and improve the user experience.
-    </p>
+        </div>
 
-    <h2>5. Local Data</h2>
+    </div>
 
-    <p>
-        Some application data may be stored locally on your device.
-    </p>
+</header>
 
-    <h2>6. Third-Party Services</h2>
 
-    <p>
-        The application may use third-party services to provide certain
-        functionality.
-    </p>
 
-    <h2>7. Data Security</h2>
+<!-- =========================================================
+     PAGE
+========================================================= -->
 
-    <p>
-        We take reasonable measures to protect information processed by
-        the application.
-    </p>
+<div class="page">
 
-    <h2>8. Contact</h2>
+    <main class="document">
 
-    <p>
-        If you have questions about this Privacy Policy, please contact us
-        at: [YOUR EMAIL]
-    </p>
+        <div class="document-body">
+
+
+            <!-- =================================================
+                 NOTICE
+            ================================================== -->
+
+            <div class="notice">
+
+                <div class="notice-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <strong>
+                        Your privacy matters to us.
+                    </strong>
+
+                    <p style="margin-top: 5px;">
+                        This Privacy Policy explains what information
+                        Deen Al Islam may process, why it is used,
+                        how it is protected, and what choices you have.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TABLE OF CONTENTS
+            ================================================== -->
+
+            <div class="toc">
+
+                <div class="toc-title">
+                    Contents
+                </div>
+
+                <div class="toc-grid">
+
+                    <a href="#introduction">
+                        1. Introduction
+                    </a>
+
+                    <a href="#information">
+                        2. Information We Process
+                    </a>
+
+                    <a href="#usage">
+                        3. How Information Is Used
+                    </a>
+
+                    <a href="#location">
+                        4. Location Services
+                    </a>
+
+                    <a href="#religious">
+                        5. Quran, Hadith & Islamic Content
+                    </a>
+
+                    <a href="#zakat">
+                        6. Zakat & Financial Information
+                    </a>
+
+                    <a href="#advertising">
+                        7. Advertising & UMP
+                    </a>
+
+                    <a href="#firebase">
+                        8. Firebase Services
+                    </a>
+
+                    <a href="#notifications">
+                        9. Notifications
+                    </a>
+
+                    <a href="#storage">
+                        10. Local Storage
+                    </a>
+
+                    <a href="#sharing">
+                        11. Data Sharing
+                    </a>
+
+                    <a href="#security">
+                        12. Security
+                    </a>
+
+                    <a href="#retention">
+                        13. Data Retention
+                    </a>
+
+                    <a href="#choices">
+                        14. Your Choices
+                    </a>
+
+                    <a href="#children">
+                        15. Children's Privacy
+                    </a>
+
+                    <a href="#thirdparty">
+                        16. Third-Party Services
+                    </a>
+
+                    <a href="#changes">
+                        17. Policy Changes
+                    </a>
+
+                    <a href="#contact">
+                        18. Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 1. INTRODUCTION
+            ================================================== -->
+
+            <section id="introduction">
+
+                <h2>1. Introduction</h2>
+
+                <p>
+                    Deen Al Islam ("Deen Al Islam", "we", "us",
+                    "our", or the "App") is an Islamic utility
+                    application developed by <strong>AROET</strong>.
+                </p>
+
+                <p>
+                    The App provides Islamic tools and resources,
+                    including prayer times, Quran, Hadith, Qibla
+                    direction, Tasbih, Duas, Islamic names,
+                    Zakat calculation, mosque discovery and
+                    notification features.
+                </p>
+
+                <p>
+                    We respect your privacy and aim to process only
+                    information that is reasonably necessary to
+                    provide and improve the App.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 2. INFORMATION
+            ================================================== -->
+
+            <section id="information">
+
+                <h2>2. Information We Process</h2>
+
+                <p>
+                    Depending on the features you use and the
+                    permissions you grant, the App or its
+                    third-party service providers may process
+                    different categories of information.
+                </p>
+
+                <div class="feature-grid">
+
+                    <div class="feature">
+
+                        <div class="feature-title">
+                            📍 Location
+                        </div>
+
+                        <p>
+                            Approximate or precise location may be
+                            used for prayer times, Qibla and mosque
+                            discovery.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-title">
+                            🔔 Notifications
+                        </div>
+
+                        <p>
+                            Notification preferences may be stored
+                            to provide prayer reminders and updates.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-title">
+                            💰 Zakat Data
+                        </div>
+
+                        <p>
+                            Zakat calculation records may be stored
+                            locally on your device.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-title">
+                            📱 Technical Data
+                        </div>
+
+                        <p>
+                            Third-party services may process
+                            technical and usage information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 3. USAGE
+            ================================================== -->
+
+            <section id="usage">
+
+                <h2>3. How Information Is Used</h2>
+
+                <p>
+                    Information may be processed when necessary to:
+                </p>
+
+                <ul>
+
+                    <li>
+                        Provide accurate local prayer times.
+                    </li>
+
+                    <li>
+                        Calculate Qibla direction.
+                    </li>
+
+                    <li>
+                        Find nearby mosques.
+                    </li>
+
+                    <li>
+                        Provide Quran, Hadith and Islamic resources.
+                    </li>
+
+                    <li>
+                        Provide Zakat calculations and history.
+                    </li>
+
+                    <li>
+                        Deliver prayer and general notifications.
+                    </li>
+
+                    <li>
+                        Display advertisements where applicable.
+                    </li>
+
+                    <li>
+                        Understand application usage and improve
+                        the App.
+                    </li>
+
+                    <li>
+                        Maintain application security, stability
+                        and reliability.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 4. LOCATION
+            ================================================== -->
+
+            <section id="location">
+
+                <h2>4. Location Services</h2>
+
+                <p>
+                    Deen Al Islam may request approximate or precise
+                    location permission from your Android device.
+                </p>
+
+                <p>
+                    Location information is used for features such as:
+                </p>
+
+                <ul>
+
+                    <li>
+                        Local prayer time calculation.
+                    </li>
+
+                    <li>
+                        Qibla direction and bearing.
+                    </li>
+
+                    <li>
+                        Nearby mosque discovery.
+                    </li>
+
+                    <li>
+                        Reverse geocoding and location display.
+                    </li>
+
+                </ul>
+
+                <p>
+                    Location permission is optional. If you deny
+                    location access, features that require location
+                    may not be available or may ask you to provide
+                    a location through available functionality.
+                </p>
+
+                <p>
+                    The App may locally cache the most recently
+                    available coordinates so that certain prayer
+                    calculations can continue to work when the
+                    device is offline.
+                </p>
+
+                <div class="highlight">
+
+                    <strong>
+                        Privacy note:
+                    </strong>
+
+                    The App does not intentionally perform continuous
+                    background location tracking for advertising or
+                    general analytics.
+                    
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 5. RELIGIOUS CONTENT
+            ================================================== -->
+
+            <section id="religious">
+
+                <h2>5. Quran, Hadith & Islamic Content</h2>
+
+                <p>
+                    Core Quran, Hadith, Dua, Kalima, Asmaul Husna,
+                    Islamic names and related resources are primarily
+                    provided from local application databases and
+                    bundled resources.
+                </p>
+
+                <p>
+                    These resources are designed to remain available
+                    without requiring an internet connection.
+                </p>
+
+                <p>
+                    The App does not require users to submit personal
+                    information in order to read the core Quran,
+                    Hadith or Islamic content.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 6. ZAKAT
+            ================================================== -->
+
+            <section id="zakat">
+
+                <h2>6. Zakat & Financial Information</h2>
+
+                <p>
+                    The Zakat calculator allows users to enter
+                    financial values required to estimate their
+                    Zakat obligation.
+                </p>
+
+                <p>
+                    Zakat calculation history is stored locally
+                    on the device using the App's local database.
+                </p>
+
+                <p>
+                    We do not intentionally send your personal
+                    Zakat history or financial calculation records
+                    to advertising or analytics services.
+                </p>
+
+                <p>
+                    When live metal prices or currency exchange
+                    information is required, the App may communicate
+                    with third-party APIs to obtain market data.
+                </p>
+
+                <div class="highlight">
+
+                    <strong>
+                        Important:
+                    </strong>
+
+                    Zakat calculations are provided as a utility
+                    feature and should not be considered professional
+                    financial, tax or religious advice.
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 7. ADS
+            ================================================== -->
+
+            <section id="advertising">
+
+                <h2>7. Advertising & User Consent</h2>
+
+                <p>
+                    Deen Al Islam may display advertisements through
+                    third-party advertising services, including
+                    Google AdMob.
+                </p>
+
+                <p>
+                    Advertising providers may process information
+                    such as advertising identifiers, device
+                    information, approximate location, application
+                    interactions and other information permitted
+                    by applicable law.
+                </p>
+
+                <p>
+                    Where required, the App uses Google's User
+                    Messaging Platform (UMP) to provide users with
+                    advertising consent and privacy choices.
+                </p>
+
+                <p>
+                    Your consent choices may affect whether
+                    personalized or non-personalized advertising
+                    is displayed.
+                </p>
+
+                <p>
+                    You can manage available privacy choices through
+                    the consent mechanisms presented by the App and
+                    through applicable Android settings.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 8. FIREBASE
+            ================================================== -->
+
+            <section id="firebase">
+
+                <h2>8. Firebase Services</h2>
+
+                <p>
+                    The App may use Google Firebase services,
+                    including Firebase Analytics and Firebase
+                    Cloud Messaging.
+                </p>
+
+                <h3>Firebase Analytics</h3>
+
+                <p>
+                    Firebase Analytics may process application usage
+                    and technical information, such as application
+                    events and screen interactions, to help improve
+                    the App.
+                </p>
+
+                <h3>Firebase Cloud Messaging</h3>
+
+                <p>
+                    Firebase Cloud Messaging may be used to deliver
+                    general notifications and updates to the device.
+                </p>
+
+                <p>
+                    Firebase services are provided by Google and are
+                    subject to Google's applicable privacy practices.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 9. NOTIFICATIONS
+            ================================================== -->
+
+            <section id="notifications">
+
+                <h2>9. Notifications</h2>
+
+                <p>
+                    If you enable notifications, Deen Al Islam may
+                    send prayer reminders and general application
+                    notifications.
+                </p>
+
+                <p>
+                    Prayer reminders may use Android's alarm
+                    scheduling functionality.
+                </p>
+
+                <p>
+                    You can disable notifications through the App's
+                    settings or your Android device settings.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 10. LOCAL STORAGE
+            ================================================== -->
+
+            <section id="storage">
+
+                <h2>10. Local Data Storage</h2>
+
+                <p>
+                    Several features of Deen Al Islam are designed
+                    to work offline.
+                </p>
+
+                <p>
+                    Depending on your use of the App, information
+                    such as preferences, cached location information,
+                    bookmarks, Tasbih state and Zakat history may be
+                    stored locally on your device.
+                </p>
+
+                <p>
+                    Local information generally remains under the
+                    control of your device and can be removed by
+                    clearing the App's data or uninstalling the App,
+                    subject to Android system behavior.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 11. SHARING
+            ================================================== -->
+
+            <section id="sharing">
+
+                <h2>11. Data Sharing</h2>
+
+                <p>
+                    We do not sell your personal information.
+                </p>
+
+                <p>
+                    Information may be processed by third-party
+                    service providers when necessary to provide
+                    specific functionality.
+                </p>
+
+                <p>
+                    Examples may include:
+                </p>
+
+                <ul>
+
+                    <li>
+                        Google AdMob for advertising.
+                    </li>
+
+                    <li>
+                        Google Firebase for analytics and messaging.
+                    </li>
+
+                    <li>
+                        Prayer calculation services where applicable.
+                    </li>
+
+                    <li>
+                        Geocoding services for location names.
+                    </li>
+
+                    <li>
+                        Map services for mosque discovery.
+                    </li>
+
+                    <li>
+                        Market and currency APIs for Zakat-related
+                        information.
+                    </li>
+
+                </ul>
+
+                <p>
+                    Third-party services operate under their own
+                    terms and privacy policies.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 12. SECURITY
+            ================================================== -->
+
+            <section id="security">
+
+                <h2>12. Data Security</h2>
+
+                <p>
+                    We take reasonable technical and organizational
+                    measures to protect information processed by
+                    the App.
+                </p>
+
+                <p>
+                    Network communications used by the App are
+                    intended to use encrypted HTTPS connections
+                    where supported by the relevant service.
+                </p>
+
+                <p>
+                    However, no electronic storage system or internet
+                    transmission can be guaranteed to be completely
+                    secure.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 13. RETENTION
+            ================================================== -->
+
+            <section id="retention">
+
+                <h2>13. Data Retention</h2>
+
+                <p>
+                    Locally stored information generally remains
+                    on your device until you remove it, clear the
+                    App's storage, or uninstall the App.
+                </p>
+
+                <p>
+                    Data processed by third-party services may be
+                    retained according to those providers' respective
+                    privacy policies and retention practices.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 14. CHOICES
+            ================================================== -->
+
+            <section id="choices">
+
+                <h2>14. Your Choices</h2>
+
+                <p>
+                    You can control several permissions and
+                    application settings, including:
+                </p>
+
+                <ul>
+
+                    <li>
+                        Location permission.
+                    </li>
+
+                    <li>
+                        Notification permission.
+                    </li>
+
+                    <li>
+                        Prayer alert settings.
+                    </li>
+
+                    <li>
+                        Advertising consent choices where applicable.
+                    </li>
+
+                    <li>
+                        Theme and language preferences.
+                    </li>
+
+                </ul>
+
+                <p>
+                    Revoking a permission may prevent certain
+                    features from functioning correctly.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 15. CHILDREN
+            ================================================== -->
+
+            <section id="children">
+
+                <h2>15. Children's Privacy</h2>
+
+                <p>
+                    Deen Al Islam is not specifically directed at
+                    children under the applicable minimum age for
+                    independent consent in their jurisdiction.
+                </p>
+
+                <p>
+                    We do not knowingly request or intentionally
+                    collect personal information from children for
+                    purposes unrelated to providing the App's
+                    functionality.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 16. THIRD PARTY
+            ================================================== -->
+
+            <section id="thirdparty">
+
+                <h2>16. Third-Party Services</h2>
+
+                <p>
+                    The App may interact with third-party services,
+                    websites or applications.
+                </p>
+
+                <p>
+                    These may include advertising, analytics,
+                    messaging, prayer calculation, geocoding,
+                    mapping, currency exchange and market-price
+                    services.
+                </p>
+
+                <p>
+                    Third-party services have their own privacy
+                    policies and terms. We recommend reviewing the
+                    applicable policies of those services.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 17. CHANGES
+            ================================================== -->
+
+            <section id="changes">
+
+                <h2>17. Changes to This Privacy Policy</h2>
+
+                <p>
+                    We may update this Privacy Policy from time to
+                    time to reflect changes in the App, services,
+                    legal requirements or privacy practices.
+                </p>
+
+                <p>
+                    When changes are made, the "Last updated" date
+                    at the top of this page will be updated.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 18. CONTACT
+            ================================================== -->
+
+            <section id="contact">
+
+                <h2>18. Contact Us</h2>
+
+                <p>
+                    If you have questions, concerns or requests
+                    regarding this Privacy Policy or the privacy
+                    practices of Deen Al Islam, please contact us.
+                </p>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-row">
+
+                        <span class="contact-label">
+                            Developer
+                        </span>
+
+                        <span>
+                            AROET
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-row">
+
+                        <span class="contact-label">
+                            Application
+                        </span>
+
+                        <span>
+                            Deen Al Islam
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-row">
+
+                        <span class="contact-label">
+                            Email
+                        </span>
+
+                        <span>
+                            <a href="mailto:aroet.officials@gmail.com">
+                                aroet.officials@gmail.com
+                            </a>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <div class="footer">
+
+                <div class="footer-brand">
+                    ☪ Deen Al Islam
+                </div>
+
+                <div>
+                    Developed by AROET
+                </div>
+
+                <div>
+                    © 2026 AROET. All rights reserved.
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+</div>
+
 
 </body>
 </html>
